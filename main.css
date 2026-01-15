@@ -1,0 +1,241 @@
+/* Основные стили из твоего файла */
+body {
+  background: url("back.jpeg") no-repeat center center fixed;
+  background-size: cover;
+  max-width: 960px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+div {
+  padding: 5px 15px;
+}
+h4 {
+  text-align: center;
+}
+
+/* Стили для экранов приложения - адаптированные из .container */
+.screen {
+  display: none;
+  background: #38d1cc;
+  margin-bottom: 10px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.71);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.71);
+  border-radius: 10px;
+  padding: 30px;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.active {
+  display: block;
+}
+
+/* Заголовок - адаптированный из .header */
+.app-header {
+  -webkit-box-shadow: 0 0 10px #20b247;
+  box-shadow: 0 0 10px #20b281;
+  border-radius: 10px;
+  margin-top: 20px;
+  background: #bf7316;
+  background-image: url("header.png");
+  min-height: 100px;
+  line-height: 100px;
+  text-align: center;
+  margin-bottom: 20px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.71);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.71);
+  color: white;
+  font-size: 24px;
+}
+
+/* Боковая панель */
+.sidebar {
+  background: #55cd7f;
+  float: left;
+  margin-right: 10px;
+  max-width: 200px;
+  min-width: 150px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.71);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.71);
+}
+
+/* Кнопки */
+button {
+  background: #0066ff;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 5px;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #0052cc;
+  -webkit-box-shadow: 0 0 10px rgba(0, 102, 255, 0.5);
+  box-shadow: 0 0 10px rgba(0, 102, 255, 0.5);
+}
+
+/* Стили для вопросов */
+.question {
+  margin: 20px 0;
+  padding: 15px;
+  border-left: 4px solid #bf7316;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+}
+
+/* Прогресс-бар - ИСПРАВЛЕННЫЙ */
+.progress-container {
+  margin: 15px 0;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px 10px 10px 10px;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 12px;
+  background: #e9ecef;
+  border-radius: 6px 6px 6px 6px;
+  overflow: hidden;
+  margin: 8px 0;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #bf7316, #55cd7f);
+  transition: width 0.3s ease;
+  border-radius: 6px 6px 6px 6px; /* Полное скругление всех углов */
+  max-width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* Кнопки ответов */
+.answer-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.answer-btn {
+  flex: 1;
+  padding: 12px;
+  border: 2px solid #dee2e6;
+  background: white;
+  color: #495057;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.answer-btn:hover {
+  border-color: #bf7316;
+  background: #f8f9fa;
+}
+
+.answer-btn.selected {
+  border-color: #bf7316;
+  background: #bf7316;
+  color: white;
+  -webkit-box-shadow: 0 0 10px rgba(191, 115, 22, 0.5);
+  box-shadow: 0 0 10px rgba(191, 115, 22, 0.5);
+}
+
+/* Результаты по категориям - ИСПРАВЛЕННЫЕ */
+.category-result {
+  margin: 12px 0;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.category-bar,
+.risk-bar {
+  width: 100%;
+  height: 16px;
+  background: #e9ecef;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 10px 0;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.category-fill,
+.risk-fill {
+  height: 100%;
+  transition: width 0.5s ease;
+  border-radius: 8px; /* Полное скругление всех углов */
+  max-width: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.overall-risk {
+  text-align: center;
+  margin: 15px 0;
+  padding: 15px;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Футер - адаптированный из твоего .footer */
+.app-footer {
+  font-weight: bold;
+  color: white;
+  background: #505050;
+  min-height: 30px;
+  line-height: 30px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.71);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.71);
+  text-align: center;
+  margin-top: 20px;
+}
+
+.clearfix {
+  clear: both;
+}
+
+/* Цвета для уровней риска */
+.risk-high {
+  background: linear-gradient(90deg, #ff6b6b, #c44569);
+}
+
+.risk-medium {
+  background: linear-gradient(90deg, #ffd93d, #ff9c2a);
+}
+
+.risk-low {
+  background: linear-gradient(90deg, #6bcf7f, #4ecdc4);
+}
+
+/* Стили для рекомендаций по категориям */
+.category-recommendation {
+  font-style: italic;
+  color: #666;
+  margin-top: 5px;
+}
+li {
+  font-size: 20px;
+}
